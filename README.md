@@ -4,7 +4,7 @@
 
 Professional-grade DESIGN.md files for AI coding agents. Not extracted from websites — engineered from design principles. Drop one into your project root. Your AI agent builds enterprise-quality UI from day one.
 
-**See every system rendered live: [weft-design.vercel.app](https://weft-design.vercel.app)**
+**See every system rendered live: [weft-systems.vercel.app](https://weft-systems.vercel.app)**
 
 ---
 
@@ -48,20 +48,20 @@ Compatible with: **Claude Code** · **Cursor** · **GitHub Copilot** · **Gemini
 
 ### Live Showcase
 
-Every system has a fully rendered interactive preview at **[weft-design.vercel.app](https://weft-design.vercel.app)**
+Every system has a fully rendered interactive preview at **[weft-systems.vercel.app](https://weft-systems.vercel.app)**
 
 ### Core Collection
 
 | System | Archetype | Preview | Best For |
 |--------|-----------|---------|----------|
-| [Enterprise SaaS](systems/enterprise-saas/) | Clean, data-dense, trustworthy | [Live](https://weft-design.vercel.app/systems/enterprise-saas) | B2B dashboards, admin panels, analytics |
-| [Fintech Dashboard](systems/fintech-dashboard/) | Precise, institutional, number-focused | [Live](https://weft-design.vercel.app/systems/fintech-dashboard) | Banking apps, trading platforms, payment tools |
-| [Creative Agency](systems/creative-agency/) | Bold, editorial, type-driven | [Live](https://weft-design.vercel.app/systems/creative-agency) | Portfolios, studios, brand-forward sites |
-| [E-Commerce Minimal](systems/e-commerce-minimal/) | Product-focused, conversion-driven | [Live](https://weft-design.vercel.app/systems/e-commerce-minimal) | Storefronts, product pages, checkout flows |
-| [African Mobile-First](systems/african-mobile-first/) | Data-light, USSD-informed, high-contrast | [Live](https://weft-design.vercel.app/systems/african-mobile-first) | Mobile apps targeting African markets |
-| [Developer Tools](systems/developer-tools/) | Code-forward, dark-native, information-dense | [Live](https://weft-design.vercel.app/systems/developer-tools) | DevTools, CLIs, documentation sites |
-| [Health & Wellness](systems/health-wellness/) | Calm, accessible, trust-building | [Live](https://weft-design.vercel.app/systems/health-wellness) | Healthtech, telemedicine, wellness platforms |
-| [Media & Editorial](systems/media-editorial/) | Content-first, readable, magazine-paced | [Live](https://weft-design.vercel.app/systems/media-editorial) | Blogs, news platforms, content-heavy apps |
+| [Enterprise SaaS](systems/enterprise-saas/) | Clean, data-dense, trustworthy | [Live](https://weft-systems.vercel.app/systems/enterprise-saas) | B2B dashboards, admin panels, analytics |
+| [Fintech Dashboard](systems/fintech-dashboard/) | Precise, institutional, number-focused | [Live](https://weft-systems.vercel.app/systems/fintech-dashboard) | Banking apps, trading platforms, payment tools |
+| [Creative Agency](systems/creative-agency/) | Bold, editorial, type-driven | [Live](https://weft-systems.vercel.app/systems/creative-agency) | Portfolios, studios, brand-forward sites |
+| [E-Commerce Minimal](systems/e-commerce-minimal/) | Product-focused, conversion-driven | [Live](https://weft-systems.vercel.app/systems/e-commerce-minimal) | Storefronts, product pages, checkout flows |
+| [African Mobile-First](systems/african-mobile-first/) | Data-light, USSD-informed, high-contrast | [Live](https://weft-systems.vercel.app/systems/african-mobile-first) | Mobile apps targeting African markets |
+| [Developer Tools](systems/developer-tools/) | Code-forward, dark-native, information-dense | [Live](https://weft-systems.vercel.app/systems/developer-tools) | DevTools, CLIs, documentation sites |
+| [Health & Wellness](systems/health-wellness/) | Calm, accessible, trust-building | [Live](https://weft-systems.vercel.app/systems/health-wellness) | Healthtech, telemedicine, wellness platforms |
+| [Media & Editorial](systems/media-editorial/) | Content-first, readable, magazine-paced | [Live](https://weft-systems.vercel.app/systems/media-editorial) | Blogs, news platforms, content-heavy apps |
 
 ### Build Your Own
 
@@ -150,4 +150,4 @@ MIT — Use freely, commercially or personally. Attribution appreciated but not 
 
 **From Accra to the world**
 
-Built by [Donald Edinam](https://github.com/Donald-Edinam) · [Live Showcase](https://weft-design.vercel.app) · Maintained by the community
+Built by [Donald Edinam](https://github.com/Donald-Edinam) · [Live Showcase](https://weft-systems.vercel.app) · Maintained by the community

@@ -31,14 +31,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Weft — Professional DESIGN.md Files for AI Coding Agents',
+  title: 'Weft.Systems — Professional DESIGN.md Files for AI Coding Agents',
   description: 'Supercharge your AI coding agents with production-ready design systems. Each system includes tokens, component specifications, and explicit agent instructions.',
   keywords: 'AI coding, design systems, next.js, agentic coding, design.md, tailwind, framer motion, UI/UX, Ghana, Accra',
   openGraph: {
-    title: 'Weft — Design Systems for agentic AI',
+    title: 'Weft.Systems — Design Systems for agentic AI',
     description: 'Production-ready UI blueprints for Claude, Cursor, and Gemini.',
-    url: 'https://weft-design.vercel.app',
-    siteName: 'Weft',
+    url: 'https://weft-systems.vercel.app',
+    siteName: 'Weft.Systems',
     images: [
       {
         url: '/og_image_weft.png',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Weft — Design Systems for AI Agents',
+    title: 'Weft.Systems — Design Systems for AI Agents',
     description: 'The structure behind the surface. Professional UI blueprints for agentic coding.',
     images: ['/og_image_weft.png'],
   },

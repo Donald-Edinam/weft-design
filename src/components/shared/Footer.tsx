@@ -9,7 +9,7 @@ export function Footer() {
           {/* Col 1 */}
           <div>
             <div className="font-['Satoshi'] text-[20px] font-bold tracking-[-0.5px]">
-              Weft<span className="text-[var(--weft-gold)]">.</span>Design
+              Weft<span className="text-[var(--weft-gold)]">.</span>Systems
             </div>
             <p className="mt-2 text-[var(--weft-gray-400)] text-[14px]">
               The structure behind the surface.

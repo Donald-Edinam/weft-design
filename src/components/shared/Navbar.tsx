@@ -38,7 +38,7 @@ export function Navbar() {
             isVisible ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
           )}
         >
-          Weft<span className="text-[var(--weft-gold)]">.</span>Design
+          Weft<span className="text-[var(--weft-gold)]">.</span>Systems
         </Link>
         
         {/* Desktop Nav */}
