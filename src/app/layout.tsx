@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Weft — Design Systems for agentic AI',
     description: 'Production-ready UI blueprints for Claude, Cursor, and Gemini.',
-    url: 'https://weft.design',
+    url: 'https://weft-design.vercel.app',
     siteName: 'Weft',
     images: [
       {
