@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 const satoshi = localFont({
   src: [
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body className="font-sans bg-[var(--weft-white)] text-[var(--weft-black)] antialiased">
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>
