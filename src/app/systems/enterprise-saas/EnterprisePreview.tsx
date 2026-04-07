@@ -5,13 +5,13 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { 
-  FileText, Layers, ExternalLink, ArrowLeft,
   LayoutDashboard, ShoppingCart, Users, Package, BarChart3, Settings, ChevronDown,
   ChevronRight, Download, Plus, 
   DollarSign, TrendingUp, TrendingDown, Target, Minus,
   CheckCircle2, Loader2, Clock, XCircle, MoreHorizontal,
   ChevronLeft, X, Inbox, RotateCcw, ArrowUpDown, Menu
 } from "lucide-react";
+import { PreviewChrome } from "@/components/shared/PreviewChrome";
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 const jbMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400'] });
@@ -109,24 +109,12 @@ export function EnterprisePreview() {
 
   return (
     <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] overflow-hidden">
-      {/* Weft Chrome Wrapper */}
-      <header className="h-[48px] bg-[var(--weft-black)] border-b border-[var(--weft-gray-900)] flex items-center justify-between px-4 shrink-0 z-[100] sticky top-0">
-        <div className="flex items-center gap-4">
-          <span className="font-sans text-[14px] font-[500] text-[var(--weft-white)]">Enterprise SaaS</span>
-          <div className="hidden sm:flex items-center gap-3 font-mono text-[12px] text-[var(--weft-gray-400)]">
-            <span className="flex items-center gap-1.5"><FileText className="w-[12px] h-[12px]" /> 534 lines</span>
-            <span className="flex items-center gap-1.5"><Layers className="w-[12px] h-[12px]" /> 12 sections</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          <a href="https://github.com/Donald-Edinam/weft-design/blob/main/src/systems/enterprise-saas/DESIGN.md" target="_blank" rel="noopener noreferrer" className="hidden sm:flex flex-row-reverse items-center gap-1.5 font-sans text-[13px] font-[500] text-[var(--weft-gold)] hover:text-[var(--weft-gold-hover)] transition-colors">
-            View DESIGN.md <ExternalLink className="w-[14px] h-[14px]" />
-          </a>
-          <Link href="/systems" className="flex items-center gap-1.5 font-sans text-[13px] font-[500] text-[var(--weft-gray-400)] hover:text-[var(--weft-white)] transition-colors">
-            <ArrowLeft className="w-[14px] h-[14px]" /> All Systems
-          </Link>
-        </div>
-      </header>
+      <PreviewChrome 
+        systemName="Enterprise SaaS"
+        lines={536}
+        sections={12}
+        slug="enterprise-saas"
+      />
 
       {/* Enterprise Workspace */}
       <div 

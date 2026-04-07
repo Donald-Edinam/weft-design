@@ -1,15 +1,16 @@
-import CreativeAgencyPreview from "./CreativeAgencyPreview";
-import { Metadata } from "next";
+import type { Metadata } from 'next';
+import CreativeAgencyPreview from './CreativeAgencyPreview';
 
 export const metadata: Metadata = {
-  title: "Creative Agency Preview | Weft Systems",
-  description: "Milestone 6: Editorial Typography-Driven Creative Agency Preview",
+  title: "Creative Agency — Weft Design Systems",
+  description: "A premium, typography-focused design system for creative studios. Minimalist, bold, and high-impact.",
+  openGraph: {
+    title: "Creative Agency — Weft",
+    description: "Studio-grade design foundations.",
+    images: ["/og_image_weft.png"],
+  },
 };
 
 export default function CreativeAgencyPage() {
-  return (
-    <main className="min-h-screen bg-black">
-      <CreativeAgencyPreview />
-    </main>
-  );
+  return <CreativeAgencyPreview />;
 }

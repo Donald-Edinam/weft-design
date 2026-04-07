@@ -66,6 +66,7 @@ export function Navbar() {
             scrolled ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
           )}
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>

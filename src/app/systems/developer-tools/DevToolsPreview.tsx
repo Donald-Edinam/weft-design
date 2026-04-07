@@ -4,10 +4,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { 
-  FileText, 
-  Layers, 
-  ExternalLink, 
-  ArrowLeft,
   FolderKanban,
   Rocket,
   Globe,
@@ -24,8 +20,10 @@ import {
   Key,
   BookOpen,
   MoreVertical,
-  ChevronRight
+  ChevronRight,
+  ExternalLink
 } from "lucide-react";
+import { PreviewChrome } from "@/components/shared/PreviewChrome";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { clsx } from "clsx";
 
@@ -97,37 +95,12 @@ export default function DevToolsPreview() {
   return (
     <div className={clsx("min-h-screen selection:bg-[#3B82F6]/30 pt-[48px]", inter.className)} style={{ backgroundColor: THEME.bg, color: THEME.textSecondary }}>
       
-      {/* 
-        ========================================================================
-        WEFT PREVIEW CHROME (Top Bar)
-        ========================================================================
-      */}
-      <div className="fixed top-0 left-0 w-full h-[48px] bg-[#000000] border-b border-white/10 flex items-center justify-between px-[16px] xl:px-[24px] z-[200]">
-        <div className="flex items-center gap-[16px]">
-          <span className="font-[600] text-white text-[14px]">Developer Tools</span>
-          <div className="h-[14px] w-[1px] bg-white/20" />
-          <div className="flex items-center gap-[12px] text-[#A1A1AA] text-[12px] font-mono">
-            <span className="flex items-center gap-[6px]">
-              <FileText className="w-[12px] h-[12px]" />
-              440 lines
-            </span>
-            <span className="flex items-center gap-[6px]">
-              <Layers className="w-[12px] h-[12px]" />
-              12 sections
-            </span>
-          </div>
-        </div>
-        <div className="flex items-center gap-[24px] text-[13px] font-[500]">
-          <Link href="/systems/developer-tools/DESIGN.md" className="flex items-center gap-[6px] text-[#EAB308] hover:text-[#CA8A04] transition-colors">
-            <ExternalLink className="w-[14px] h-[14px]" />
-            View DESIGN.md
-          </Link>
-          <Link href="/sys" className="flex items-center gap-[6px] text-[#A1A1AA] hover:text-white transition-colors">
-            <ArrowLeft className="w-[14px] h-[14px]" />
-            All Systems
-          </Link>
-        </div>
-      </div>
+      <PreviewChrome 
+        systemName="Developer Tools"
+        lines={439}
+        sections={12}
+        slug="developer-tools"
+      />
 
       {/* 
         ========================================================================

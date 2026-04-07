@@ -4,10 +4,6 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
-  FileText,
-  Layers,
-  ExternalLink,
-  ArrowLeft,
   LayoutDashboard,
   ArrowLeftRight,
   SendHorizontal,
@@ -30,8 +26,11 @@ import {
   Loader2,
   Info,
   X,
-  ChevronDown
+  ChevronDown,
+  ExternalLink,
+  ArrowLeft
 } from "lucide-react";
+import { PreviewChrome } from "@/components/shared/PreviewChrome";
 import { Inter, JetBrains_Mono } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600"] });
@@ -125,37 +124,12 @@ export default function FintechPreview() {
   return (
     <div className={`min-h-screen bg-black flex flex-col items-center pt-[48px] ${inter.className}`}>
       
-      {/* 
-        ========================================================================
-        WEFT PREVIEW CHROME (Top Bar)
-        ========================================================================
-      */}
-      <div className="fixed top-0 left-0 w-full h-[48px] bg-[var(--weft-black,#000000)] border-b border-white/10 flex items-center justify-between px-[16px] xl:px-[24px] z-[200]">
-        <div className="flex items-center gap-[16px]">
-          <span className="font-semibold text-white text-[14px]">Fintech Dashboard</span>
-          <div className="h-[14px] w-[1px] bg-white/20" />
-          <div className="flex items-center gap-[12px] text-[#A1A1AA] text-[12px] font-mono">
-            <span className="flex items-center gap-[6px]">
-              <FileText className="w-[12px] h-[12px]" />
-              494 lines
-            </span>
-            <span className="flex items-center gap-[6px]">
-              <Layers className="w-[12px] h-[12px]" />
-              12 sections
-            </span>
-          </div>
-        </div>
-        <div className="flex items-center gap-[24px] text-[13px] font-medium">
-          <Link href="/systems/fintech-dashboard/DESIGN.md" className="flex items-center gap-[6px] text-[#EAB308] hover:text-[#CA8A04] transition-colors">
-            <ExternalLink className="w-[14px] h-[14px]" />
-            View DESIGN.md
-          </Link>
-          <Link href="/sys" className="flex items-center gap-[6px] text-[#A1A1AA] hover:text-white transition-colors">
-            <ArrowLeft className="w-[14px] h-[14px]" />
-            All Systems
-          </Link>
-        </div>
-      </div>
+      <PreviewChrome 
+        systemName="Fintech Dashboard"
+        lines={493}
+        sections={12}
+        slug="fintech-dashboard"
+      />
 
       {/* 
         ========================================================================

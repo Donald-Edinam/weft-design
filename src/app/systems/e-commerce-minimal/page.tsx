@@ -1,15 +1,16 @@
-import ECommerceMinimalPreview from "./ECommerceMinimalPreview";
-import { Metadata } from "next";
+import type { Metadata } from 'next';
+import ECommerceMinimalPreview from './ECommerceMinimalPreview';
 
 export const metadata: Metadata = {
-  title: "E-Commerce Minimal Preview | Weft Systems",
-  description: "Milestone 8: High-Fidelity Product-First E-Commerce Preview",
+  title: "E-Commerce Minimal — Weft Design Systems",
+  description: "A minimalist, product-first e-commerce design system. Zero friction, high luxury, and monochrome aesthetics.",
+  openGraph: {
+    title: "E-Commerce Minimal — Weft",
+    description: "Let the products speak for themselves.",
+    images: ["/og_image_weft.png"],
+  },
 };
 
 export default function ECommerceMinimalPage() {
-  return (
-    <main className="min-h-screen bg-white">
-      <ECommerceMinimalPreview />
-    </main>
-  );
+  return <ECommerceMinimalPreview />;
 }

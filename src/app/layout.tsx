@@ -30,8 +30,31 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Weft — Design Systems for AI Agents',
-  description: 'A collection of professional-grade DESIGN.md files for AI coding agents.',
+  title: 'Weft — Professional DESIGN.md Files for AI Coding Agents',
+  description: 'Supercharge your AI coding agents with production-ready design systems. Each system includes tokens, component specifications, and explicit agent instructions.',
+  keywords: 'AI coding, design systems, next.js, agentic coding, design.md, tailwind, framer motion, UI/UX, Ghana, Accra',
+  openGraph: {
+    title: 'Weft — Design Systems for agentic AI',
+    description: 'Production-ready UI blueprints for Claude, Cursor, and Gemini.',
+    url: 'https://weft.design',
+    siteName: 'Weft',
+    images: [
+      {
+        url: '/og_image_weft.png',
+        width: 1200,
+        height: 630,
+        alt: 'Weft Design Systems',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Weft — Design Systems for AI Agents',
+    description: 'The structure behind the surface. Professional UI blueprints for agentic coding.',
+    images: ['/og_image_weft.png'],
+  },
 };
 
 export default function RootLayout({

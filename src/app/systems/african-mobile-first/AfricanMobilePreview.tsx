@@ -5,12 +5,13 @@ import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { 
-  FileText, Layers, ExternalLink, ArrowLeft, Signal, Wifi, BatteryFull,
+  Signal, Wifi, BatteryFull,
   Bell, Sun, Banknote, ShoppingBag, Users, Clock, ArrowRight, Circle, Plus,
   Search, SlidersHorizontal, RefreshCw, Phone, MapPin, ChevronRight, 
   MessageCircle, Smartphone, CreditCard, LogOut, Home, ClipboardList, Settings,
   CheckCircle2, XCircle, AlertCircle
 } from "lucide-react";
+import { PreviewChrome } from "@/components/shared/PreviewChrome";
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 const jbMono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500'] });
@@ -124,24 +125,12 @@ export function AfricanMobilePreview() {
 
   return (
     <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] overflow-hidden">
-      {/* Chrome Top Bar */}
-      <header className="h-[48px] bg-[var(--weft-black)] border-b border-[var(--weft-gray-900)] flex items-center justify-between px-4 shrink-0 z-[100] sticky top-0">
-        <div className="flex items-center gap-4">
-          <span className={`text-[14px] font-[500] text-[var(--weft-white)] ${jakarta.className}`}>African Mobile-First</span>
-          <div className={`hidden sm:flex items-center gap-3 text-[12px] text-[var(--weft-gray-400)] ${jbMono.className}`}>
-            <span className="flex items-center gap-1.5"><FileText className="w-[12px] h-[12px]" /> 510 lines</span>
-            <span className="flex items-center gap-1.5"><Layers className="w-[12px] h-[12px]" /> 12 sections</span>
-          </div>
-        </div>
-        <div className={`flex items-center gap-6 ${jakarta.className}`}>
-          <a href="https://github.com/Donald-Edinam/weft-design/blob/main/src/systems/african-mobile-first/DESIGN.md" target="_blank" rel="noopener noreferrer" className="hidden sm:flex flex-row-reverse items-center gap-1.5 text-[13px] font-[500] text-[var(--weft-gold)] hover:text-[var(--weft-gold-hover)] transition-colors">
-            View DESIGN.md <ExternalLink className="w-[14px] h-[14px]" />
-          </a>
-          <Link href="/systems" className="flex items-center gap-1.5 text-[13px] font-[500] text-[var(--weft-gray-400)] hover:text-[var(--weft-white)] transition-colors">
-            <ArrowLeft className="w-[14px] h-[14px]" /> All Systems
-          </Link>
-        </div>
-      </header>
+      <PreviewChrome 
+        systemName="African Mobile-First"
+        lines={512}
+        sections={12}
+        slug="african-mobile-first"
+      />
 
       {/* Desktop Wrapper / Mobile Container */}
       <div className="flex-1 w-full bg-[var(--weft-gray-50)] sm:p-8 flex justify-center items-center overflow-hidden">
@@ -170,7 +159,7 @@ export function AfricanMobilePreview() {
               {activeTab === "Home" && (
                 <div className="animate-in fade-in slide-in-from-left-4 duration-250 opacity-100">
                   <header className="px-[16px] py-[16px] flex items-center justify-between">
-                    <h1 className="text-[18px] font-[600] text-[var(--color-text-primary)]">Buzzba Breeze</h1>
+                    <h1 className="text-[18px] font-[600] text-[var(--color-text-primary)]">Sales <span className="text-[var(--color-primary)]">Hub</span></h1>
                     <button className="w-[40px] h-[40px] flex items-center justify-center -mr-[8px]">
                       <Bell className="w-[20px] h-[20px] text-[var(--color-text-primary)]" />
                     </button>
