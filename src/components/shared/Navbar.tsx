@@ -26,7 +26,7 @@ export function Navbar() {
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6 lg:px-12 h-full flex items-center justify-between">
         <Link href="/" className="font-display font-bold tracking-tight text-[24px] text-[var(--weft-black)]">
-          Weft
+          Weft<span className="text-[var(--weft-gold)]">.</span>Design
         </Link>
         
         {/* Desktop Nav */}
