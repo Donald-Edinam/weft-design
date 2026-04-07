@@ -40,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${satoshi.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable} font-sans bg-[var(--weft-white)] text-[var(--weft-black)] antialiased`}>
+    <html lang="en" className={`${satoshi.variable} ${plusJakartaSans.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans bg-[var(--weft-white)] text-[var(--weft-black)] antialiased">
         <Navbar />
         {children}
         <Footer />
