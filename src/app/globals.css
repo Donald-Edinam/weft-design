@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plus-jakarta-sans);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-display: var(--font-satoshi);
+}
+
+:root {
+  /* Weft Brand Tokens */
+  --weft-black: #09090B;
+  --weft-white: #FAFAF8;
+  --weft-gold: #C9A84C;
+  --weft-gold-hover: #B8963F;
+  --weft-gray-50: #F5F5F3;
+  --weft-gray-100: #E8E8E5;
+  --weft-gray-200: #D4D4CF;
+  --weft-gray-400: #8A8A85;
+  --weft-gray-600: #52524E;
+  --weft-gray-800: #2A2A28;
+  --weft-gray-900: #1A1A18;
+
+  /* Spacing */
+  --weft-space-xs: 4px;
+  --weft-space-sm: 8px;
+  --weft-space-md: 16px;
+  --weft-space-lg: 24px;
+  --weft-space-xl: 32px;
+  --weft-space-2xl: 48px;
+  --weft-space-3xl: 64px;
+  --weft-space-4xl: 96px;
+  --weft-space-5xl: 128px;
+}
+
+/* Base styles for font families */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--weft-white);
+  color: var(--weft-black);
+}
