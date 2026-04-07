@@ -95,8 +95,8 @@
 | H4 | 11px | 600 | 1.40 | 0.5px | Overlines (uppercase) |
 | Body | 14px | 400 | 1.60 | 0px | Descriptions |
 | Small | 12px | 400 | 1.50 | 0px | Metadata |
-| Code-lg | 14px | 400 | 1.60 | 0px | Code blocks |
-| Code-sm | 12px | 400 | 1.50 | 0px | Inline code |
+| Code-lg | 13px | 400 | 1.60 | 0px | Code blocks |
+| Code-sm | 11px | 400 | 1.50 | 0px | Inline code, logs |
 
 ### Typography Rules
 - Monospace is used for: code snippets, deployment URLs, commit hashes, branch names, file paths, environment variables, port numbers, and any machine-generated string.
