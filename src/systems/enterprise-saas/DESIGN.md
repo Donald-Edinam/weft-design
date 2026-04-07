@@ -532,3 +532,5 @@ Use these as examples when prompting an agent with this DESIGN.md:
 - Using full-rounded (999px) buttons — buttons are 6px radius, not pills.
 - Generating without empty and loading states — every data view needs both.
 - Using `text-align: center` on table data — only status badges are centered, text is left, numbers are right.
+- Forgetting to map unpopulated navigation tabs to Empty States — do not copy/paste dummy data across every tab; use the "Empty State" component for unimplemented pages to keep navigation functional.
+- Causing text overflow with 4-column metric grids — when a 240px fixed sidebar is present, `lg:grid-cols-4` (1024px) leaves too little space for 30px tabular numbers. Break to 4-columns at `xl:grid-cols-4` (1280px) instead.

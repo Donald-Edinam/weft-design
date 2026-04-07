@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-@theme inline {
-  --font-sans: var(--font-plus-jakarta-sans);
-  --font-mono: var(--font-jetbrains-mono);
-  --font-display: var(--font-satoshi);
+@theme {
+  --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: var(--font-satoshi), var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
