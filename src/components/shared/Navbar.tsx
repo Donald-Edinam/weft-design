@@ -2,12 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ExternalLink } from "lucide-react";
 import { clsx } from "clsx";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  
+  const isLanding = pathname === "/";
+  const forceVisible = !isLanding;
+  const isVisible = scrolled || forceVisible;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +27,7 @@ export function Navbar() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 h-[64px] z-50 transition-colors duration-200",
-        scrolled ? "bg-[var(--weft-white)] border-b border-[var(--weft-gray-200)]" : "bg-transparent"
+        isVisible ? "bg-[var(--weft-white)] border-b border-[var(--weft-gray-200)]" : "bg-transparent"
       )}
     >
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-6 lg:px-12 h-full flex items-center justify-between">
@@ -29,7 +35,7 @@ export function Navbar() {
           href="/" 
           className={clsx(
             "font-display font-bold tracking-tight text-[24px] transition-colors duration-200",
-            scrolled ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
+            isVisible ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
           )}
         >
           Weft<span className="text-[var(--weft-gold)]">.</span>Design
@@ -41,7 +47,7 @@ export function Navbar() {
             href="/systems" 
             className={clsx(
               "font-sans text-[14px] font-[500] uppercase tracking-[0.5px] transition-colors duration-200",
-              scrolled ? "text-[var(--weft-black)] hover:text-[var(--weft-gold-hover)]" : "text-[var(--weft-white)] hover:text-[var(--weft-gold)]"
+              isVisible ? "text-[var(--weft-black)] hover:text-[var(--weft-gold-hover)]" : "text-[var(--weft-white)] hover:text-[var(--weft-gold)]"
             )}
           >
             Systems
@@ -52,7 +58,7 @@ export function Navbar() {
             rel="noopener noreferrer" 
             className={clsx(
               "font-sans text-[14px] font-[500] uppercase tracking-[0.5px] transition-colors duration-200 flex items-center gap-1",
-              scrolled ? "text-[var(--weft-black)] hover:text-[var(--weft-gold-hover)]" : "text-[var(--weft-white)] hover:text-[var(--weft-gold)]"
+              isVisible ? "text-[var(--weft-black)] hover:text-[var(--weft-gold-hover)]" : "text-[var(--weft-white)] hover:text-[var(--weft-gold)]"
             )}
           >
             GitHub <ExternalLink className="w-[14px] h-[14px]" />
@@ -63,7 +69,7 @@ export function Navbar() {
         <button 
           className={clsx(
             "md:hidden transition-colors duration-200",
-            scrolled ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
+            isVisible ? "text-[var(--weft-black)]" : "text-[var(--weft-white)]"
           )}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
