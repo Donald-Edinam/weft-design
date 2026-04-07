@@ -36,7 +36,7 @@ export default function LandingPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-display font-[700] text-[64px] md:text-[120px] text-[var(--weft-white)] tracking-[-3px] leading-none mb-6"
           >
-            Weft
+            Weft<span className="text-[var(--weft-gold)]">.</span>Design
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
