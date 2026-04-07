@@ -143,7 +143,8 @@ Label: "Order via WhatsApp" or "Chat on WhatsApp"
 
 ### Button Rules
 - **48px minimum height everywhere.** No exceptions. Thumbs, not cursors.
-- Full-width on screens < 480px. Side-by-side only on tablet+.
+- Standard buttons are full-width on screens < 480px. Side-by-side only on tablet+.
+- **Floating Action Buttons (FAB):** Use a 56x56px circular button (`rounded-full`) anchored to the bottom-right for global actions like "New Order". Do NOT use full-width heavy block buttons spanning the whole screen for sticky global actions as they suffocate the UI.
 - Primary button at bottom of forms, sticky if the form scrolls.
 - WhatsApp CTA is treated as a primary-level action in customer-facing flows.
 - Maximum 2 buttons visible at any time. More choices = more confusion for first-time users.
@@ -480,7 +481,7 @@ body {
 
 ### Mobile-First Rules
 - Write mobile CSS first, then use `min-width` media queries for larger screens.
-- Every button is 48px tall and full-width by default.
+- Standard form/action buttons are 48px tall and full-width by default. Use 56x56px FABs (Floating Action Buttons) for global floating actions.
 - Navigation is a bottom tab bar by default, sidebar only at 768px+.
 - Modals → bottom sheets on mobile.
 - Use `env(safe-area-inset-bottom)` for bottom-fixed elements.
@@ -488,7 +489,7 @@ body {
 ### Agent Prompt Templates
 
 **Order list page:**
-"Build a mobile order list with pull-to-refresh. Each order card shows: order ID (mono), status badge, customer name, item summary (1 line truncated), price (bold), and date. Bottom tab bar with Home/Orders/Customers/Settings. Full-width 'New Order' button sticky at bottom. Use the African Mobile-First DESIGN.md."
+"Build a mobile order list with pull-to-refresh. Each order card shows: order ID (mono), status badge, customer name, item summary (1 line truncated), price (bold), and date. Bottom tab bar with Home/Orders/Customers/Settings. Include a 56x56px circular 'New Order' Floating Action Button at the bottom right. Use the African Mobile-First DESIGN.md."
 
 **Customer detail page:**
 "Create a customer profile page: avatar (initials fallback), name, phone (tappable to call), total orders, total spent. Below: order history list (last 10, infinite scroll). Top: back arrow + 'Customer' title. WhatsApp CTA button at bottom. Use DESIGN.md for all tokens."
@@ -502,6 +503,7 @@ body {
 - Using modals instead of bottom sheets on mobile.
 - Using hover-dependent interactions (no hover on touchscreens).
 - Setting touch targets below 48px — especially on action buttons and list items.
+- Using heavy, full-width block buttons for sticky global actions (like "New Order") instead of a clean 56x56px Floating Action Button (FAB).
 - Loading full-resolution images — compress and lazy-load everything.
 - Using dropdown `<select>` for short option lists — use radio buttons or chips.
 - Paginating lists instead of infinite scroll.
