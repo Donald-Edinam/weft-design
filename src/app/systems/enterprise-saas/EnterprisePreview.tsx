@@ -108,7 +108,7 @@ export function EnterprisePreview() {
   };
 
   return (
-    <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] overflow-hidden">
+    <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] pt-[48px] overflow-hidden">
       <PreviewChrome 
         systemName="Enterprise SaaS"
         lines={536}
@@ -119,10 +119,10 @@ export function EnterprisePreview() {
       {/* Enterprise Workspace */}
       <div 
         style={THEME} 
-        className={`flex-1 flex w-full relative bg-[var(--color-bg)] text-[var(--color-text-secondary)] ${inter.className} text-[14px] leading-[1.6]`}
+        className={`flex-1 flex w-full relative bg-[var(--color-bg)] text-[var(--color-text-secondary)] ${inter.className} text-[14px] leading-[1.6] min-h-0`}
       >
         {/* Sidebar Desktop/Tablet */}
-        <aside className="hidden sm:flex flex-col border-r border-[var(--color-border)] bg-[var(--color-surface)] sm:w-[64px] lg:w-[240px] shrink-0 sticky top-[48px] h-[calc(100vh-48px)] z-40 transition-all duration-200 overflow-hidden">
+        <aside className="hidden sm:flex flex-col border-r border-[var(--color-border)] bg-[var(--color-surface)] sm:w-[64px] lg:w-[240px] shrink-0 sticky top-0 h-[calc(100vh-48px)] z-40 transition-all duration-200 overflow-hidden">
           <div className="h-[48px] flex items-center px-4 lg:px-[16px] sm:justify-center lg:justify-start shrink-0">
             <div className="w-[24px] h-[24px] bg-[var(--color-primary)] rounded-[4px] shrink-0" />
             <span className="ml-[12px] font-[600] text-[16px] text-[var(--color-text-primary)] hidden lg:block tracking-[-0.2px]">Company</span>
@@ -157,9 +157,9 @@ export function EnterprisePreview() {
         </aside>
 
         {/* Main Content Area */}
-        <main className="flex-1 flex flex-col min-w-0">
+        <main className="flex-1 flex flex-col min-w-0 min-h-0">
           {/* Header */}
-          <header className="h-[64px] border-b border-[var(--color-border)] bg-[var(--color-surface)] px-[16px] md:px-[32px] flex items-center justify-between sticky top-[48px] z-30 shrink-0">
+          <header className="h-[64px] border-b border-[var(--color-border)] bg-[var(--color-surface)] px-[16px] md:px-[32px] flex items-center justify-between sticky top-0 z-30 shrink-0">
             <div className="flex items-center gap-[16px]">
               <button 
                 className="sm:hidden text-[var(--color-text-primary)] p-[8px] -ml-[8px] hover:bg-[var(--color-surface-secondary)] rounded-[6px]"
@@ -191,7 +191,7 @@ export function EnterprisePreview() {
           </header>
 
           {/* Scrollable Content */}
-          <div className="flex-1 p-[16px] md:p-[32px] overflow-auto">
+          <div className="flex-1 p-[16px] md:p-[32px] overflow-y-auto min-h-0">
             {activeTab === "Overview" ? (
               <>
                 {/* Metric Cards Row */}

@@ -124,7 +124,7 @@ export function AfricanMobilePreview() {
   };
 
   return (
-    <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] overflow-hidden">
+    <div className="fixed inset-0 z-[500] w-full flex flex-col min-h-screen bg-[var(--weft-black)] pt-[48px] overflow-hidden">
       <PreviewChrome 
         systemName="African Mobile-First"
         lines={512}
@@ -133,7 +133,7 @@ export function AfricanMobilePreview() {
       />
 
       {/* Desktop Wrapper / Mobile Container */}
-      <div className="flex-1 w-full bg-[var(--weft-gray-50)] sm:p-8 flex justify-center items-center overflow-hidden">
+      <div className="flex-1 w-full bg-[var(--weft-gray-50)] sm:p-8 flex justify-center items-center overflow-hidden min-h-0">
         
         {/* CSS Phone Frame */}
         <div className="relative w-full h-full sm:w-[375px] sm:h-[812px] sm:max-h-full sm:rounded-[40px] sm:border-[8px] border-[#1A1A1A] bg-[var(--color-bg)] overflow-hidden flex flex-col sm:drop-shadow-2xl">
@@ -150,7 +150,7 @@ export function AfricanMobilePreview() {
 
           <div 
             style={THEME} 
-            className={`flex-1 flex flex-col bg-[var(--color-bg)] text-[var(--color-text-secondary)] text-[15px] ${jakarta.className} relative overflow-hidden`}
+            className={`flex-1 flex flex-col bg-[var(--color-bg)] text-[var(--color-text-secondary)] text-[15px] ${jakarta.className} relative overflow-hidden min-h-0`}
           >
             {/* Scrollable Area */}
             <div className="flex-1 overflow-x-hidden overflow-y-auto pb-[130px]">
